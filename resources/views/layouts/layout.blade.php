@@ -10,7 +10,7 @@
 <body>
     <header>
         <div>
-            <img src="ruta/a/tu/logo.png" alt="Logo del sitio">
+            <img src="ruta/a/tu/logo.png" alt="CholloOfertas">
             <h1>Chollo Ofertas</h1>
         </div>
         <nav>

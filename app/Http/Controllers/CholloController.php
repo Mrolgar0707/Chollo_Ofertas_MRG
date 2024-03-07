@@ -34,7 +34,7 @@ class CholloController extends Controller
         Chollo::create($request->all());
 
         return redirect()->route('chollos.index')
-                         ->with('success', 'Chollo creado correctamente.');
+            ->with('success', 'Chollo creado correctamente.');
     }
 
     public function edit($id)
@@ -42,6 +42,7 @@ class CholloController extends Controller
         $chollo = Chollo::findOrFail($id);
         return view('chollos.edit', compact('chollo'));
     }
+
 
     public function update(Request $request, $id)
     {
@@ -60,13 +61,21 @@ class CholloController extends Controller
         $chollo->update($request->all());
 
         return redirect()->route('chollos.index')
-                         ->with('success', 'Chollo actualizado correctamente.');
+            ->with('success', 'Chollo actualizado correctamente.');
     }
 
     public function destroy($id)
     {
         Chollo::findOrFail($id)->delete();
         return redirect()->route('chollos.index')
-                         ->with('success', 'Chollo eliminado correctamente.');
+            ->with('success', 'Chollo eliminado correctamente.');
     }
+
+    public function show($id)
+    {
+        $chollo = Chollo::findOrFail($id);
+        return view('chollos.show', compact('chollo'));
+    }
+
+
 }
