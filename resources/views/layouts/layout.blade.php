@@ -10,7 +10,7 @@
 <body>
     <header class="bg-light">
         <div class="container py-3 d-flex justify-content-between align-items-center">
-            <img src="ruta/a/tu/logo.png" alt="CholloOfertas" class="logo">
+            <img src="{{ asset('img/logo.jpg') }}" alt="CholloOfertas" class="logo">
             <h1 class="m-0">Chollo Ofertas</h1>
             <nav>
                 <ul class="nav">
