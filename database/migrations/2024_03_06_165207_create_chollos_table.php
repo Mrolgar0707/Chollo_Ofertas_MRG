@@ -11,8 +11,8 @@ class CreateChollosTable extends Migration
         Schema::create('chollos', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->text('descripcion');
-            $table->string('url');
+            $table->string('descripcion');
+            $table->string('url', 1000); // Establecer la longitud máxima a 1000 caracteres
             $table->string('categoria');
             $table->integer('puntuacion');
             $table->decimal('precio', 8, 2);
@@ -20,6 +20,7 @@ class CreateChollosTable extends Migration
             $table->boolean('disponible');
             $table->timestamps();
         });
+
     }
 
     public function down()

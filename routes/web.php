@@ -13,3 +13,4 @@ Route::get('/nuevos', [CholloController::class, 'nuevos'])->name('nuevos');
 Route::get('/destacados', [CholloController::class, 'destacados'])->name('destacados');
 Route::get('/chollos/{id}', [CholloController::class, 'show'])->name('chollos.show');
 Route::get('/chollos/create', [CholloController::class, 'create'])->name('chollos.create');
+Route::get('/chollos', [CholloController::class, 'index'])->name('chollos.index');

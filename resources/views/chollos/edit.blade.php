@@ -47,6 +47,13 @@
                 <label for="precio_descuento">Precio con Descuento:</label>
                 <input type="number" step="0.01" class="form-control" id="precio_descuento" name="precio_descuento" value="{{ old('precio_descuento', $chollo->precio_descuento) }}" required>
             </div>
+            <div class="form-group">
+                <label for="disponible">Disponible:</label>
+                <select class="form-control" id="disponible" name="disponible" required>
+                    <option value="1" {{ $chollo->disponible ? 'selected' : '' }}>Sí</option>
+                    <option value="0" {{ !$chollo->disponible ? 'selected' : '' }}>No</option>
+                </select>
+            </div>
             <button type="submit" class="btn btn-primary">Actualizar Chollo</button>
         </form>
     </div>
