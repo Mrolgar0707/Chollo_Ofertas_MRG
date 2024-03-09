@@ -1,5 +1,3 @@
-<!-- resources/views/chollos/create.blade.php -->
-
 @extends('layouts.layout')
 
 @section('title', 'Crear Chollo')
@@ -45,6 +43,13 @@
             <div class="form-group">
                 <label for="precio_descuento">Precio con Descuento:</label>
                 <input type="number" step="0.01" class="form-control" id="precio_descuento" name="precio_descuento" value="{{ old('precio_descuento') }}" required>
+            </div>
+            <div class="form-group">
+                <label for="disponible">Disponible:</label>
+                <select class="form-control" id="disponible" name="disponible" required>
+                    <option value="1">Sí</option>
+                    <option value="0">No</option>
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Crear Chollo</button>
         </form>

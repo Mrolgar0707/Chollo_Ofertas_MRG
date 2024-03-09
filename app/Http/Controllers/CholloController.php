@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Chollo;
 
+
 class CholloController extends Controller
 {
     public function index()
@@ -17,6 +18,13 @@ class CholloController extends Controller
     {
         return view('chollos.create');
     }
+
+    public function nuevos()
+    {
+        $chollos = Chollo::orderBy('created_at', 'desc')->get(); // Obtener los chollos ordenados por fecha de creación
+        return view('chollos.nuevos', compact('chollos'));
+    }
+
 
     public function store(Request $request)
     {
